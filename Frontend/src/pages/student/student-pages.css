@@ -1,0 +1,11 @@
+/* Shared placeholder style for student pages */
+.student-page { padding: 8px; }
+.student-page h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, #6c63ff, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.student-page p { color: #718096; font-size: 14px; }
