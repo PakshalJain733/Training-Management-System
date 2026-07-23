@@ -132,10 +132,12 @@
 /* ─── Wrapper ──────────────────────────────────── */
 .login-wrapper {
   display: flex;
-  gap: 20px;
   align-items: stretch;
   z-index: 1;
   position: relative;
+  border-radius: 24px;
+  box-shadow: 0 28px 64px rgba(0, 30, 100, 0.18), 0 4px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
 }
 
 /* ─── Left Panel ───────────────────────────────── */
@@ -146,11 +148,11 @@
   display: flex;
   flex-direction: column;
   padding: 40px 36px 0 36px;
-  border-radius: 20px;
+  border-radius: 0;
   position: relative;
   z-index: 1;
   overflow: hidden;
-  box-shadow: 0 24px 48px rgba(0, 74, 181, 0.1);
+  box-shadow: none;
 }
 
 .left-content {
@@ -220,8 +222,8 @@
   width: 420px;
   background: #fff;
   padding: 40px 44px 36px 44px;
-  border-radius: 20px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+  border-radius: 0;
+  box-shadow: none;
   position: relative;
   z-index: 1;
 }
@@ -229,8 +231,8 @@
 .logo {
   display: block;
   margin: 0 auto 10px auto;
-  width: 72px;
-  height: auto;
+  width: 140px;
+  height: 90px;
 }
 
 .card-title {
@@ -262,9 +264,29 @@
   font-size: 14px;
 }
 
+.input-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 13px;
+  display: flex;
+  align-items: center;
+  color: #9ca3af;
+  pointer-events: none;
+  transition: color 0.2s ease;
+}
+
+.input-icon-wrapper:focus-within .input-icon {
+  color: #2563eb;
+}
+
 .input-group input {
   width: 100%;
-  padding: 12px 14px;
+  padding: 12px 14px 12px 42px;
   border: 1.5px solid #dde3ee;
   border-radius: 9px;
   font-size: 15px;
@@ -381,8 +403,12 @@
     display: none;
   }
 
-  .login-card {
+  .login-wrapper {
     border-radius: 20px;
+  }
+
+  .login-card {
+    border-radius: 0;
     width: 100%;
     max-width: 440px;
     padding: 36px 28px;
